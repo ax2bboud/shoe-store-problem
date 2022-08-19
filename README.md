@@ -1,5 +1,13 @@
 # Shoe Store
 
+## Solution
+
+This is my submission for this challenge. Is it the best implementation or solution? Not even close. But I tried to limit myself to a reasonable amount of time to complete this. 
+
+I'd like to think that I, at least, laid the foundation to a potential solid solution on the server side. If I had more time, I would run a full Rails app to make use of ORM and passthrough the websocket calls through my Rails server saving the data into objects and exposing them on a fully-fledged JSON API with CRUD capabilities. Or maybe, I could store the different inventory updates with timestamps for BI purposes down the line.
+
+For the front-end, I would have preferred to have a more user friendly experience that represents the data in a more visual format. People are better at pattern recognition, than reading a bunch of text.
+
 ## Synopsis
 
 Aldo Shoes is having a huge flash sale online. You provide support to the inventory department. They want to react real-time to various inventory problems as they arise.
@@ -59,6 +67,24 @@ Run the following to start tapping into the inventory events.
 ```
 
 You now have an active connection to their stores opened on port 8080.
+
+### Sinatra Server
+
+The Sinatra server passing through the inventory updates needs to be run through your preferred terminal.
+
+But first, we must install the gem dependencies listed in the Gemfile:
+
+```
+bundle install
+```
+
+After that, the server can be started with the following command:
+
+```
+ruby app.rb
+```
+
+To view the front-end of the app, please navigate to your [localhost](http://localhost/).
 
 ### Start listening on each event
 
